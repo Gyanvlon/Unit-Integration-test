@@ -12,6 +12,6 @@ public class UnitTestApplication  implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-		System.out.println("this is testing instance");
+		System.out.println("this is application on test");
 	}
 }
