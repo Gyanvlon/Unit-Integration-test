@@ -39,6 +39,14 @@ pipeline {
                 }
             }
         }
+         stage('Delete Existing Container if There same name') {
+            steps {
+                 script {
+                    docker.container('container').stop()
+                    docker.container('container').remove(force: true)
+                }
+            }
+        }
         stage('Deploy Docker Image') {
             steps {
                 script {
